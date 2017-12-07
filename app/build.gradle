@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    buildToolsVersion '27.0.1'
     defaultConfig {
         applicationId "tk.zhzephi.demo"
         minSdkVersion 24
@@ -24,7 +24,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -32,8 +32,9 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile "org.jetbrains.anko:anko-sdk15:0.9.1" // So here it's 15 too
-    compile "org.jetbrains.anko:anko-appcompat-v7:0.9.1"
-    compile "org.jetbrains.anko:anko-design:0.9.1"
-    compile "org.jetbrains.anko:anko-recyclerview-v7:0.9.1"
+    compile 'org.jetbrains.anko:anko-sdk15:0.9.1'
+    // So here it's 15 too
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.9.1'
+    compile 'org.jetbrains.anko:anko-design:0.9.1'
+    compile 'org.jetbrains.anko:anko-recyclerview-v7:0.9.1'
 }
