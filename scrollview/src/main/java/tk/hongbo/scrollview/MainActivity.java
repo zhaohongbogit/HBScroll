@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     NewAdapter adapter;
 
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public List<NewVo> getData() {
         List<NewVo> data = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             NewVo vo = new NewVo();
             vo.title = "中华人民共和国" + i;
             vo.name = "我们是伟大的劳动人民建立起来的和谐家园" + i;
